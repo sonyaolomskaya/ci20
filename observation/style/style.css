@@ -1,0 +1,275 @@
+@keyframes opendoors {
+from {
+width: 50%;
+}
+to {
+width :10%;
+}
+}
+
+@keyframes opendoorss {
+from {
+left: 50%;
+}
+to {
+left :90%;
+}
+}
+
+.envelope {
+	height: 100%;
+	width: 100%;
+position: relative;
+}
+
+.about {
+	width: 50%;
+	height: 95%;
+	background-color: rgb(211,211,211);
+	position: fixed;
+	border-style: solid;
+	border-color: rgb(169,169,169);
+	z-index: 10;
+}
+
+.about1 {
+	left: 50%;
+	width: 50%;
+	height: 95%;
+	background-color: rgb(211,211,211);
+	position: fixed;
+	border-style: solid;
+	border-color: rgb(169,169,169);
+	 z-index: 10;
+}
+
+.opendoor {
+	animation: opendoors 1s linear;
+	animation-fill-mode: forwards;
+}
+
+.opendoorr {
+	animation: opendoorss 1s linear;
+	animation-fill-mode: forwards;
+}
+
+ .triangleup {
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid rgb(105,105,105);
+      left: 95%;
+      top: 45%;
+      position: fixed;
+      z-index: 10;
+    }
+
+.triangledown {
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 50px solid rgb(105,105,105);
+      left: 95%;
+      top: 60%;
+      position: fixed;
+      z-index: 10;
+    }
+
+.who {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	font-weight: bold;
+	left: 20%;
+	top: 5%;
+	position: fixed;
+}
+
+.made {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	width: 30%;
+	height: 30%;
+	left: 20%;
+	top: 10%;
+	position: fixed;
+}
+
+.rule {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	width: 30%;
+	height: 30%;
+	left: 55%;
+	top: 35%;
+	position: fixed;
+}
+
+.effect {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	font-weight: bold;
+	left: 55%;
+	top: 30%;
+	position: fixed;
+}
+
+.elisha {
+	position: fixed;
+	left: 20%;
+	top: 35%;
+}
+
+.goods {
+	position: fixed;
+	left: 17%;
+	top: 57%;
+}
+
+.resident {
+	position: fixed;
+	left: 35%;
+	top: 57%;
+}
+
+.panel {
+	position: fixed;
+	left: 60%;
+	top: 55%;
+}
+
+.safety {
+	position: fixed;
+	left: 60%;
+	top: 60%;
+}
+
+.how {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	font-weight: bold;
+	left: 55%;
+	top: 5%;
+	position: fixed;
+}
+
+
+.works {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	width: 30%;
+	height: 30%;
+	left: 55%;
+	top: 10%;
+	position: fixed;
+}
+
+.process {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	font-weight: bold;
+	left: 45%;
+	top: 5%;
+	position: fixed;
+}
+
+.citetitle {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	font-weight: bold;
+	left: 45%;
+	top: 30%;
+	position: fixed;
+}
+
+.cite {
+	font-family: Futura, san-serif;
+	font-size: 20px;
+	width: 40%;
+	height: 30%;
+	left: 30%;
+	top: 35%;
+	position: fixed;	
+}
+
+.button {
+top: 20%;
+left: 35%;
+position: fixed;
+}
+
+.close {
+top: 50%;
+left: 35%;
+position: fixed;
+}
+
+.numbers {
+top: 20%;
+left: 50%;
+position: fixed;
+}
+
+.exit {
+top: 50%;
+left: 50%;
+position: fixed;
+}
+
+.first {
+top: 30%;
+left: 13%;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(192,192,192);
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  font-size: 40px;
+  font-family: Futura, san-serif;
+}
+
+.second {
+top: 40%;
+left: 13%;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(192,192,192);
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  font-size: 40px;
+  font-family: Futura, san-serif;
+}
+
+
+.third {
+top: 50%;
+left: 13%;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(192,192,192);
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  font-size: 40px;
+  font-family: Futura, san-serif;
+}
+
+.fourth {
+top: 60%;
+left: 13%;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(192,192,192);
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  font-size: 40px;
+  font-family: Futura, san-serif;
+}
