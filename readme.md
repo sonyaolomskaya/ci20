@@ -1,7 +1,9 @@
-# Core Interaction 
+# Core Interaction Spring 2020
 
-### Spring 2020
+### Parsons School of Design 
 
-Parsons School of Design 
+## Core Studio 
 
-- [project 1](http://)
+- [observation](http://)
+
+## Core Lab 
