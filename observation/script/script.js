@@ -35,6 +35,14 @@ $('.safety').html('<img src="images/safety.jpg" height="250" width="250">');
 $('.process') .empty('process');
 $('.cite') .empty('cite');
 $('.citetitle') .empty('citetitle');
+$('.stepone') .empty('stepone');
+$('.steptwo') .empty('steptwo');
+$('.stepthree') .empty('stepthree');
+$('.stepfour') .empty('stepfour');
+$('.stepfive') .empty('stepfive');
+$('.stepsix') .empty('stepsix');
+$('.check') .empty('check');
+$('.call') .empty('call');
 });
 
 $('.first').on('click', function(){
@@ -58,6 +66,14 @@ $('.safety') .empty('safety');
 $('.process') .empty('process');
 $('.cite') .empty('cite');
 $('.citetitle') .empty('citetitle');
+$('.stepone') .empty('stepone');
+$('.steptwo') .empty('steptwo');
+$('.stepthree') .empty('stepthree');
+$('.stepfour') .empty('stepfour');
+$('.stepfive') .empty('stepfive');
+$('.stepsix') .empty('stepsix');
+$('.check') .empty('check');
+$('.call') .empty('call');
 });
 
 
@@ -78,10 +94,18 @@ $('.safety') .empty('safety');
 $('.process') .html('Step by Step');
 $('.cite') .empty('cite');
 $('.citetitle') .empty('citetitle');
-$('.button').html('<img src="images/button.jpg" height="200" width="200">');
-$('.numbers').html('<img src="images/numbers.jpg" height="200" width="200">');
-$('.close').html('<img src="images/close.jpg" height="200" width="200">');
-$('.exit').html('<img src="images/exit.jpg" height="200" width="200">');
+$('.stepone') .html('1-Call the elevator');
+$('.steptwo') .html('2-Choose your floor');
+$('.stepthree') .html('3-Close the doors');
+$('.stepfour') .html('4-Check for your floor');
+$('.stepfive') .html('5-Call for help in emergencies');
+$('.stepsix') .html('6-Exit on your floor');
+$('.button').html('<img src="images/button.jpg" height="300" width="250">');
+$('.numbers').html('<img src="images/numbers.jpg" height="300" width="250">');
+$('.close').html('<img src="images/close.jpg" height="300" width="250">');
+$('.check').html('<img src="images/check.jpg" height="300" width="250">');
+$('.call').html('<img src="images/call.jpg" height="300" width="250">');
+$('.exit').html('<img src="images/exit.jpg" height="300" width="250">');
 });
 
 $('.fourth').on('click', function(){
@@ -103,6 +127,14 @@ $('.panel').empty('panel');
 $('.effect') .empty('effect');
 $('.rule') .empty('rule');
 $('.safety') .empty('safety');
+$('.stepone') .empty('stepone');
+$('.steptwo') .empty('steptwo');
+$('.stepthree') .empty('stepthree');
+$('.stepfour') .empty('stepfour');
+$('.stepfive') .empty('stepfive');
+$('.stepsix') .empty('stepsix');
+$('.check') .empty('check');
+$('.call') .empty('call');
 });
 
 //$('.triangledown').on('click', function(){

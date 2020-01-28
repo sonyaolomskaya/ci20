@@ -169,7 +169,7 @@ position: relative;
 	font-family: Futura, san-serif;
 	font-size: 20px;
 	font-weight: bold;
-	left: 45%;
+	left: 50%;
 	top: 5%;
 	position: fixed;
 }
@@ -194,26 +194,86 @@ position: relative;
 }
 
 .button {
-top: 20%;
-left: 35%;
+top: 15%;
+left: 20%;
+position: fixed;
+}
+
+.stepone {
+font-family: Futura, san-serif;
+font-size: 20px;
+left: 20%;
+top: 10%;
+position: fixed;
+}
+
+.steptwo {
+font-family: Futura, san-serif;
+font-size: 20px;
+left: 45%;
+top: 10%;
+position: fixed;
+}
+
+.stepthree {
+font-family: Futura, san-serif;
+font-size: 20px;
+left: 70%;
+top: 10%;
+position: fixed;
+}
+
+.stepfour {
+font-family: Futura, san-serif;
+font-size: 20px;
+left: 20%;
+top: 54%;
+position: fixed;
+}
+
+.stepfive {
+font-family: Futura, san-serif;
+font-size: 20px;
+left: 45%;
+top: 54%;
+position: fixed;
+}
+
+.stepsix {
+font-family: Futura, san-serif;
+font-size: 20px;
+left: 70%;
+top: 54%;
 position: fixed;
 }
 
 .close {
-top: 50%;
-left: 35%;
+top: 15%;
+left: 70%;
 position: fixed;
 }
 
 .numbers {
-top: 20%;
-left: 50%;
+top: 15%;
+left: 45%;
 position: fixed;
 }
 
 .exit {
-top: 50%;
-left: 50%;
+top: 58%;
+left: 70%;
+position: fixed;
+}
+
+.check {
+top: 58%;
+left: 20%;
+position: fixed;
+}
+
+.call {
+top: 58%;
+left: 45%;
 position: fixed;
 }
 

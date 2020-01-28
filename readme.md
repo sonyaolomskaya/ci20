@@ -4,6 +4,6 @@
 
 ## Core Studio 
 
-- [observation](http://)
+- [Observation](http://sonyaolomskaya.github.io/ci20/observation/index.html)
 
 ## Core Lab 
