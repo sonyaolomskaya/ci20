@@ -2,8 +2,10 @@
 
 ### Parsons School of Design 
 
-## Core Studio 
+## Studio Intercation
 
 - [Observation](http://sonyaolomskaya.github.io/ci20/observation/index.html)
 
-## Core Lab 
+## Lab Intercation
+
+- [Homework 1](http://sonyaolomskaya.github.io/ci20/homework-1/index.html)
