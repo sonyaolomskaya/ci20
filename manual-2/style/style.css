@@ -1,16 +1,8 @@
 html, body {
 	width: 100%;
-	height: 7500px;
 	margin: 0;
+	height: 8000px;
 }
-
-
-@media (max-width: 1000) {
-	.manualheader {
-		top: 20%;
-	}
-}
-
 
 a:-webkit-any-link {
     color: black;
@@ -18,33 +10,67 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+.lobby {
+margin-top: 40%;
+margin-left: 10%;
+height: 100px;
+width: 100px;
+background-color: #bbb;
+border-radius: 50%;
+border: 5px rgb(105,105,105) solid;
+font-family: 'Futura', sans-serif;
+font-size: 80px;
+text-align: center;
+text-decoration: none;
+position: fixed;
+top:0;
+left:0;
+}
+
+.a {
+	height: 200px;
+	width: 200px;
+}
+
 .header {
+	margin-top: 90%;
 	width: 100%;
-	height: 800px;
-	background-color: rgb(220,220,220);
+	height: 900px;
+	z-index: 10;
+	background-color: rgb(211,211,211);
+
 }
 
 .parent {
 width: 300px;
-margin-left: 40%;
-margin-top: 5%;
+height: 100px;
+margin-left: 10%;
+margin-top: 20%;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-position: absolute;
 justify-content: space-between;
+z-index: 10;
+position: fixed;
+top:0;
+left:0;
 }
 
 .parentagain {
 width: 300px;
-margin-left: 40%;
-margin-top: 30%;
+height: 100px;
+margin-left: 10%;
+margin-top: 2%;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-position: absolute;
 justify-content: space-between;
+z-index: 10;
+position: fixed;
+top:0;
+left:0;
 }
+
 
 
 .floorone {
@@ -57,11 +83,41 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 text-decoration: none;
+justify-content: space-between;
+z-index: 10;
+margin-top: 10px;
 }
 
 #section2 {
 	text-decoration: none;
 }
+
+.manualheader {
+	margin-top: 30%;
+	margin-left: 50%;
+	margin-top: 350px;
+	font-family: 'Saira', sans-serif;
+	font-size: 100px;
+	position: absolute;
+}
+
+/*@media (max-width: 1000px) {
+	.manualheader {
+		margin-top: 100px;
+		margin-left: 200px;
+		font-size: 80px;
+	}
+
+	.parent {
+		margin-top: 30%;
+		margin-left: 15%;
+	}
+
+	.parentagain {
+		margin-left: 50%;
+	}
+
+}*/
 
 .floortwo {
 height: 100px;
@@ -73,7 +129,7 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 justify-content: space-between;
-margin-left: 10px;
+margin-top: 10px;
 }
 
 .floorthree {
@@ -86,7 +142,6 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 justify-content: space-between;
-margin-top: 10px;
 }
 
 .floorfour {
@@ -99,7 +154,6 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 justify-content: space-between;
-margin-top: 10px;
 }
 
 .floorfive {
@@ -112,6 +166,7 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 justify-content: space-between;
+margin-top: 10px;
 }
 
 .floorsix {
@@ -124,6 +179,7 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 justify-content: space-between;
+margin-top: 10px;
 }
 
 .floorseven {
@@ -136,7 +192,6 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 justify-content: space-between;
-margin-top: 10px;
 }
 
 .flooreight {
@@ -149,179 +204,203 @@ font-family: Futura, sans-serif;
 font-size: 80px;
 text-align: center;
 justify-content: space-between;
-margin-top: 10px;
 }
 
 .parent2 {
-margin-left: 5%;
+margin-top: 10%;
+margin-left: 40%;
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 position: absolute;
 justify-content: space-between;
+z-index: 5;	
 }
 
 .step1 {
-font-family: Futura, sans-serif;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
 text-shadow: 50px black;
+z-index: 5;	
 }
 
 .stepone {
-font-family: Futura, sans-serif;
-font-size: 50px;	
+font-family: 'Saira', sans-serif;
+font-size: 50px;
+z-index: 5;	
 }
 
 .nextstep {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 90%;
+margin-top: 20%;
+margin-left: 0%;
 text-decoration: underline;
 }
 
 .step2 {
+margin-left: 40%;
 margin-top: 30%;
-font-family: Futura, sans-serif;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
 }
 
 .steptwo {
-
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 50px;	
 }
 
-.nextstep {
-font-family: Futura, sans-serif;
-font-size: 30px;
-margin-left: 90%;
-text-decoration: underline;
-}
 
 .step3 {
 margin-top: 30%;
-font-family: Futura, sans-serif;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
+margin-left: 40%;
 }
 
 .stepthree {
-
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 50px;	
 }
 
 .nextstep2 {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 90%;
+margin-top: 20%;
+margin-left: 40%;
 text-decoration: underline;
 }
 
 .step4 {
+margin-left: 40%;
 margin-top: 30%;
-font-family: Futura, sans-serif;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
 }
 
 .stepfour {
-
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 50px;	
 }
 
 .nextstep3 {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 90%;
+margin-top: 15%;
+margin-left: 40%;
 text-decoration: underline;
 }
 
 .step5 {
 margin-top: 30%;
-font-family: Futura, sans-serif;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
+margin-left: 40%;
 }
 
 .stepfive {
-
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 50px;	
 }
 
 .nextstep4 {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 90%;
+margin-top: 15%;
+margin-left: 40%;
 text-decoration: underline;
 }
 
 .step6 {
+margin-left: 40%;
 margin-top: 30%;
-font-family: Futura, sans-serif;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
 }
 
 .stepsix {
-
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 50px;	
 }
 
 .nextstep5 {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 90%;
+margin-top: 15%;
+margin-left: 40%;
 text-decoration: underline;
 }
 
 .step7 {
+margin-left: 40%;
 margin-top: 30%;
-font-family: Futura, sans-serif;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
 }
 
 .stepseven {
-
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 50px;	
 }
 
 .nextstep6 {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 90%;
+margin-left: 40%;
+margin-top: 10%;
 text-decoration: underline;
 }
 
 .step8 {
-margin-top: 30%;
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 200px;
 }
 
 .stepeight {
-
-font-family: Futura, sans-serif;
+margin-left: 40%;
+font-family: 'Saira', sans-serif;
 font-size: 50px;	
 }
 
 .nextstep7 {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 90%;
+margin-top: 10%;
+margin-left: 40%;
 text-decoration: underline;
 }
 
-.backtotop {
+.backtotop1 {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 88%;
+text-decoration: underline;	
+}
+
+.backtotop {
+margin-left: 40%;
+font-family: Futura, sans-serif;
+font-size: 30px;
 text-decoration: underline;	
 }
 
 .previousstep {
 font-family: Futura, sans-serif;
 font-size: 30px;
-margin-left: 87%;
+margin-left: 40%;
+text-decoration: underline;	
+}
+
+.previousstep1 {
+font-family: Futura, sans-serif;
+font-size: 30px;
+margin-top: 5%;
+margin-left: 40%;
 text-decoration: underline;	
 }
