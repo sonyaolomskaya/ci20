@@ -13,3 +13,4 @@
 ## Lab Intercation
 
 - [Homework 1](http://sonyaolomskaya.github.io/ci20/homework-1/index.html)
+- [Homework 2](http://sonyaolomskaya.github.io/ci20/homework-2/index.html)
