@@ -7,23 +7,29 @@ function createLetter(key) {
   var cursor = document.querySelector("#cursor");
   var span = document.createElement("span");
   if (key.toLowerCase() == "a"){
-    span.innerHTML = '<iframe  src="https://www.youtube.com/embed/aQXh_AaJXaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
+    span.innerHTML = '<iframe  src="https://www.youtube.com/embed/aQXh_AaJXaM?controlbar=none&icons=false" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
+    // ?autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=1&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=aQXh_AaJXaM
   }
   else if (key.toLowerCase() == "b"){
     span.innerHTML = '<iframe src="https://www.youtube.com/embed/T2TDSEG57hI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
+    // ?autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=1&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=T2TDSEG57hI
   }
   else if (key.toLowerCase() == "c"){
     span.innerHTML = '<iframe src="https://www.youtube.com/embed/pYcGFLgJ8Uo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
+    // ?autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=1&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=pYcGFLgJ8Uo
   }
   else if (key.toLowerCase() == "d"){
     span.innerHTML = '<iframe  src="https://www.youtube.com/embed/PPOaxHqoYxo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
+    // ?autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=1&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=PPOaxHqoYxo
   }
   else if (key.toLowerCase() == "e"){
     span.innerHTML = '<iframe src="https://www.youtube.com/embed/07-QBnEkgXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
+  // ?autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=1&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=07-QBnEkgXU
   }
   else if (key.toLowerCase() == "f"){
     span.innerHTML = '<iframe src="https://www.youtube.com/embed/9oQ628Seb9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
-  }
+  // ?autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=1&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=9oQ628Seb9w
+  } 
   else if (key.toLowerCase() == "g"){
     span.innerHTML = '<iframe src="https://www.youtube.com/embed/4WmCBRkWJ54" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
   }
@@ -93,7 +99,8 @@ function createLetter(key) {
 
 function deleteElement() {
   entryCount += 1;
-  var letter = document.querySelector("#cursor").previousSibling;
+  console.log('letter');
+  var letter = Array.from(document.querySelectorAll('span')).pop();
   if (letter) {
     letter.remove();
     displayCount -= 1;
@@ -104,17 +111,11 @@ function deleteElement() {
 }
 
 document.onkeydown = function(e) {
-  if (e.keyCode == 8) {
-    deleteElement();
-  }
-  if (e.keyCode == 13) {
-    createLetter("<br>");
-  }
-  if (e.key == " ") {
-    createLetter("&nbsp;");
-  }
   // anything contained in this string is allowed to print to the screen
   // you can add numbers or symbols
+  if (e.keyCode == 8) {
+    deleteElement();
+  } 
   if ("abcdefghijklmnopqrstuvwxyz".includes(e.key.toLowerCase())) {
     createLetter(e.key);
   }
@@ -123,96 +124,105 @@ document.onkeydown = function(e) {
     //   document.querySelectorAll("iframe")[0].style.width = "100%";
     document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr";
     document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr";
+    document.querySelectorAll("iframe").forEach(element => { element.style.height = "100%"; });
+
   }if (displayCount == 2) {
-    // document.querySelectorAll("iframe")[0].style.height = "50%";
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr";
+document.querySelectorAll("iframe").forEach(element => { element.style.height = "50%"; });
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(50%, 1fr))";
     document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr";
   } else if (displayCount == 3) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "33%";
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(2, 1fr)";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(2, 1fr)";
+   document.querySelectorAll("iframe").forEach(element => { element.style.height = "100%"; });
    
   } else if (displayCount == 4) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr";
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(2, 1fr)";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(2, 1fr)";
+   document.querySelectorAll("iframe").forEach(element => { element.style.height = "100%"; });
+
+  }  else if (displayCount >= 5 && displayCount <= 6 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(3, 1fr)";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(2, 1fr)";
+    // document.querySelectorAll("iframe").forEach(element => { element.style.height = "100%"; });
+    // document.querySelectorAll("iframe").forEach(element => { element.style.width = "100%"; });
+
+  }  else if (displayCount >= 7 && displayCount <= 8 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(3, 1fr)";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(3, 1fr)";
     // document.querySelectorAll("iframe")[0].style.height = "25%";
 
-  }  else if (displayCount >= 5 && displayCount <= 8 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr";
+  }  else if (displayCount >= 9 && displayCount <= 12) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(4, 1fr)";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(3, 1fr)";
+    // document.querySelectorAll("iframe")[0].style.height = "100%";
+
+  }  else if (displayCount >= 13 && displayCount <= 15 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(20%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(33.3%, 1fr))";
     // document.querySelectorAll("iframe")[0].style.height = "25%";
 
-  }  else if (displayCount >= 9 && displayCount <= 12 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr";
+  }  else if (displayCount >= 16 && displayCount <= 20 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(5, 1fr)";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(4, 1fr)";
     // document.querySelectorAll("iframe")[0].style.height = "25%";
 
-  }  else if (displayCount >= 13 && displayCount <= 16 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr";
+  }  else if (displayCount >= 20 && displayCount <= 25 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(20%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(20%, 1fr))";
     // document.querySelectorAll("iframe")[0].style.height = "25%";
 
-  }  else if (displayCount >= 17 && displayCount <= 20 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1frs";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "25%";
-
-  }  else if (displayCount >= 21 && displayCount <= 25 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "25%";
-
-  }  else if (displayCount >= 26 && displayCount <= 30 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "25%";
+  } else if (displayCount >= 26 && displayCount <= 30 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(16.6%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(20%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
 
   } else if (displayCount >= 31 && displayCount <= 36 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr";
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(16.6%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(16.6%, 1fr))";
     // document.querySelectorAll("iframe")[0].style.height = "10%";
 
   } else if (displayCount >= 37 && displayCount <= 42 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr";
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(14.2%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(16.6%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "5%";
+
+} else if (displayCount >= 43 && displayCount <= 49 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(14.2%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(14.2%, 1fr))";
     // document.querySelectorAll("iframe")[0].style.height = "10%";
-
-  } else if (displayCount >= 43 && displayCount <= 49 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "5%";
-
-} else if (displayCount >= 50 && displayCount <= 54 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+} else if (displayCount >= 50 && displayCount <= 56 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(12.5%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(14%, 1fr))";
     // document.querySelectorAll("iframe")[0].style.height = "10%";
-
-} else if (displayCount >= 55 && displayCount <= 66 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "5%";
-
-} else if (displayCount >= 67 && displayCount <= 72 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "5%";
-
-} else if (displayCount >= 73 && displayCount <= 78 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "5%";
-
-} else if (displayCount >= 79 && displayCount <= 84 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "5%";
-
-} else if (displayCount >= 85 && displayCount <= 89 ) {
-    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.querySelectorAll(".span")[0].style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    // document.querySelectorAll("iframe")[0].style.height = "5%";
-
-} 
+} else if (displayCount >= 57 && displayCount <= 64 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(12.5%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(12.5%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
+} else if (displayCount >= 65 && displayCount <= 72 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(11.1%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(12.5%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
+} else if (displayCount >= 73 && displayCount <= 81 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(11.1%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(11.1%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
+} else if (displayCount >= 82 && displayCount <= 90 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(10%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(11.1%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
+}  else if (displayCount >= 91 && displayCount <= 100 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(10%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(10%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
+} else if (displayCount >= 101 && displayCount <= 110 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(10%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(9%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
+}  else if (displayCount >= 111 && displayCount <= 121 ) {
+    document.querySelectorAll(".span")[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(9%, 1fr))";
+    document.querySelectorAll(".span")[0].style.gridTemplateRows = "repeat(auto-fit, minmax(9%, 1fr))";
+    // document.querySelectorAll("iframe")[0].style.height = "10%";
+}
   console.log("entry #" + entryCount + " : " + e.keyCode + " | " + e.key + ". Showing " + displayCount);
 }
 
