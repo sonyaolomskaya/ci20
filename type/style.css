@@ -3,6 +3,7 @@ html,body {
   width: 100%;
     margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 /*
@@ -50,14 +51,11 @@ iframe {
   width: 100%;
   height: 100%;
 }
-/*
-.movies {
-  font-size: 100px;
-  color: black;
-  position:absolute; 
-}*/
 
-/*img {
-  filter: blur(0.2em);
-}*/
+img {
+  filter: blur(0.1em);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 

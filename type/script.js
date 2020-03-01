@@ -7,8 +7,8 @@ function createLetter(key) {
   var cursor = document.querySelector("#cursor");
   var span = document.createElement("span");
   if (key.toLowerCase() == "a"){
-    span.innerHTML = '<iframe  src="https://www.youtube.com/embed/aQXh_AaJXaM?controlbar=none&icons=false" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
-    // ?autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=1&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=aQXh_AaJXaM
+    span.innerHTML = '<iframe  src="https://www.youtube.com/embed/aQXh_AaJXaM??autoplay=1&showinfo=0&modestbranding=1&wmode=transparent&controls=0&color=white&rel=0&enablejsapi=1&playsinline=1&&version=3&theme=light&autohide=1&egm=0&showsearch=0&loop=1&playlist=aQXh_AaJXaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
+    
   }
   else if (key.toLowerCase() == "b"){
     span.innerHTML = '<iframe src="https://www.youtube.com/embed/T2TDSEG57hI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';  
