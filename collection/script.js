@@ -1,6 +1,34 @@
+//for fetch to work we need a server
+fetch("data.json")
+  .then(function(blob){ return blob.json(); })
+  .then(function(json){ buildPage(json); });
+
+  function buildPage(data) {
+    console.log(data)
+    // for (var i = 0; i < data.length; i = i +1) {
+    //  console.log(data[i]);
+    // }
+
+    //filter is asking for a true or false 
+    //for each item we generate a true or false
+    //entry is an object
+    //entry is each object inside the data
+    var Location = data.filter(function(entry){ return entry.Location == "Singapore"; });
+    //entry.Location entry.Folder Name
+    console.log(Location);
+    //data is unaffected
+    // var blues = data.filter(function(entry){ return entry.Colors.includes.("blue")});
+  }
+
+// for (var i = 0; i = i + 1) {
+//  img = document.createElement("img")
+//  img.src = data[i].link;
+//  vat span = document.createElement("span");
+//  span.innerHTML = data[i].caption
+// }
+
 
 function show(target){
-document.querySelectorAll(".b").forEach(element => { element.style.display = "none"; });
 document.querySelectorAll("body").forEach(element => { element.style.margin = "0"; });
 
 //for the boxes:
