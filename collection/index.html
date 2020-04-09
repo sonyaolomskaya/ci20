@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>Desktop</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="header"></div>
+  <div>
+    <!-- add the class u want to show on show -->
+    <li><a href="#" class="filter a" onclick="show('.bw');"><img src="assets/folder.png" width="100px" height="100px"></a></li> 
+    <li><a href="#" class="filter b d" onclick="show('.alpha');"><img src="assets/folder2.png" width="100px" height="100px"></a></li>
+    <li><a href="#" class="filter b c" onclick="show('.red');"><img src="assets/folder3.png" width="100px" height="100px"></a></li>
+    <li><a href="#" class="filter b c" onclick="show('.yellow');"><img src="assets/folder4.png" width="100px" height="100px"></a></li>
+    <li><a href="#" class="filter b" onclick="show('.green');"><img src="assets/folder5.png" width="100px" height="100px"></a></li>
+    <li><a href="#" class="filter b" onclick="show('.items');"><img src="assets/system.png" width="300px" height="300px"></a></li>
+  </div>
+  <div class="secondrow">
+    <li><a href="#" class="filter b" onclick="show('.num');"><img src="assets/folder6.png" width="100px" height="100px"></a></li>
+    <li><a href="#" class="filter b" onclick="show('.num');"><img src="assets/folder8.png" width="100px" height="100px"></a></li>
+    <li><a href="#" class="filter b" onclick="show('.num');"><img src="assets/folder7.png" width="100px" height="100px"></a></li>
+     <li><a href="#" class="filter b" onclick="show('.num');"><img src="assets/folder9.png" width="100px" height="100px"></a></li>
+     <li><a href="#" class="filter b" onclick="show('.num');"><img src="assets/folder10.png" width="100px" height="100px"></a></li>
+  </div> 
+  </div>
+  <div class="items bw one"><img src="assets/bwdigital/1.jpg" width="100px" height="150px"></div> <!-- add a secondary class to filter by --> <!-- each row of your ledger -->
+  <div class="items bw two"><img src="assets/bwdigital/2.jpg" width="100px" height="150px"></div>
+  <div class="items bw"></div>
+  <div class="items bw"></div>
+  <div class="items alpha green">A</div>
+  <div class="items alpha red">B</div>
+  <div class="items alpha yellow">C</div>
+  <div class="items alpha red">D</div>
+</body>
+</html>
