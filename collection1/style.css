@@ -1,0 +1,94 @@
+
+body {
+  background-color: rgb(0,128,128);
+  padding: 0;
+  margin: 0;
+
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.envelope {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.items {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  float:left; /*makes them go from right to left*/
+  display: none; /*so they only show when you click on the link*/
+  margin-left: 10px;
+
+}
+
+.shown {
+  display: block; /*to display */
+}
+
+.firstrow {
+  z-index: 4;
+  position: absolute;
+  margin-top: 20%;
+}
+
+.countries {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
+.years {
+position: absolute;
+left: 30%;
+bottom: 10%;
+}
+
+.secondrow {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  margin-top: 20%;
+}
+
+.all {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  padding-bottom: 0;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+img:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+.giphy {
+  position: absolute;
+  filter: opacity(20%);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+.giphy:hover {
+  filter: opacity(20%);
+}
+
