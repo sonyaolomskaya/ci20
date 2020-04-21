@@ -45,7 +45,7 @@ transition: all .4s ease-in-out;
 image-rendering: none;
 filter: none;
 z-index: 15 !important;
-position: fixed;
+position: absolute;
 justify-content: center;
 align-items: center;
 cursor: wait;

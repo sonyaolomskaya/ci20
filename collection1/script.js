@@ -14,11 +14,6 @@ fetch("data.json")
   var urlParams;
   var queryString;
 
-function myFunction() {
-  document.getElementById("popclose").addEventListener("click", function(){
-  document.getElementById("popup").style.display = "none";
-});
-}
 
 function buildItem(data){
 

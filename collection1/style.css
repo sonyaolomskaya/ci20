@@ -62,6 +62,15 @@ bottom: 10%;
   margin-left: 40%;
 }
 
+.pop {
+    position: fixed;
+    width: 25%;
+    height: 30%;
+    z-index: 20;
+    top: 1%;
+    left: 70%;
+}
+
 #popup {
 position: absolute;
 z-index: 5;
@@ -69,12 +78,13 @@ display: block;
 left: 20%;
 top: 10%;
 cursor: default;
+z-index: 1;
 }
 
 #popclose {
   display: block;
-left: 95%;
-    top: 2%;
+    top: 1%;
+    left: 70%;
   height: 27px;
   width: 38px;
   position: absolute;
@@ -84,6 +94,7 @@ left: 95%;
 
 .pop:hover {
   filter: none;
+  cursor: default;
 }
 
 a {
