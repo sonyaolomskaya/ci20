@@ -4,74 +4,51 @@ var xmlhttp = new XMLHttpRequest();
 var url = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=WMMt7pEXnGGOBzdexaCMpzSy2KAMLVA0"; //your file name (or, the structured URL for API call)
 var data = [];
 
-	xmlhttp.onreadystatechange = function() {
+xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     data = JSON.parse(this.responseText);
     console.log(data);
     printTitle(data);
   }
 };
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 
-	function printTitle(data){
-		var books = data.results.books;
-		for (i = 0; i < books.length; i++) {
- 		var item = document.createElement("a");
-	item.classList.add('description');
+function printTitle(data) {
 
-		var anchor = document.createElement("a");
-		anchor.innerText = books[i].description;
-		anchor.href = books[i].amazon_product_url;
-		anchor.target = "_blank";
+  var rawBooks = data.results.books;
+  var books = rawBooks.sort(() => Math.random() - 0.5);
 
-	var title = document.createElement("p");
-	title.classList.add('title');
-	title.innerText = books[i].title;
+  for (i = 0; i < books.length; i++) {
 
+    var anchor = document.createElement("a");
+    anchor.innerText = books[i].description;
+    anchor.href = books[i].amazon_product_url;
+    anchor.classList.add(`link`);
+    anchor.classList.add(`test${i+1}`);
+    anchor.target = "_blank";
 
-// document.getElementsByClassName(".description").onmouseover = function() {
-//     style.display = "block";
-// }
+    var title = document.createElement("p");
+    title.classList.add(`title`);
+    title.classList.add(`test${i+1}`);
+    title.innerText = books[i].title;
 
-// 			$('.description').mouseenter(function() {
-// document.querySelector('hover').style.display = "block";
-// })
+    anchor.addEventListener("mouseenter", function( event ) {   
+      var titleClass = event.srcElement.classList[1];
+      var findElements = document.getElementsByClassName(titleClass)
+      var title = findElements[1];
+      title.style.display = "block";
+    }, false);
 
-// 		$(anchor).mouseleave(function() {
+    anchor.addEventListener("mouseout", function( event ) {   
+      var titleClass = event.srcElement.classList[1];
+      var findElements = document.getElementsByClassName(titleClass)
+      var title = findElements[1];
+      title.style.display = "none";
+    }, false);
 
-// })
+    document.querySelector('.result').appendChild(anchor);
+    document.querySelector('.hover').appendChild(title);
 
-
-item.appendChild(anchor);
-document.querySelector('.result').appendChild(item);
-
-document.querySelector('.hover').appendChild(title);
-
-}
-
-// $(function() {
-//     $(".description").on("mouseenter", function() {
-//       $(this).find(".title").first().show();
-//     });
-
-//     $(".description").on("mouseleave", function() {
-//       $(this).find(".title").first().hide();
-//     });
-//   });
-
-reorder();
-}
-
-
-
-
-
-function reorder() {
-var random = $(".result>a");
-for(var i = 0; i < random.length; i++){
-    var target = Math.floor(Math.random() * random.length -1) + 1;
-    var target2 = Math.floor(Math.random() * random.length -1) +1;
-    random.eq(target).before(random.eq(target2));
-	}
+  }
 }
