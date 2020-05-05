@@ -1,0 +1,42 @@
+
+body {
+  font-size: 40px;
+font-family: 'Abril Fatface', cursive;
+  color: #000;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  padding-right: 5px;
+}
+
+a:hover {
+  filter: opacity(0.5);
+}
+
+.result {
+	text-align: justify; 
+	margin-left: 15%;
+	margin-right: 15%;
+	display: inline-block;
+	line-height: 1.5;
+}
+
+.caption {
+	  font-size: 20px;
+	  margin-left: 80%;
+}
+
+.title {
+	font-size: 20px;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+
+.hover {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
