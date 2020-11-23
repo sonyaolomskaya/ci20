@@ -1,0 +1,31 @@
+p {
+	margin-left: 500px;
+	color: black;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 25px;
+	font-weight: 500;
+	width: 50%;
+	height: 50%;
+}
+
+h1 {
+	margin-top: 360px;
+	margin-left: -200px;
+	position: fixed;
+	transform: rotate(-90deg);
+	color: black;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 150px;
+	font-weight: 500;
+}
+
+h2 {
+	margin-top: 300px;
+	margin-left: -180px;
+	position: fixed;
+	transform: rotate(-90deg);
+	color: black;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 120px;
+	font-weight: 500;
+}
